@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(217, 212, 255, 0.52), transparent 22rem),
+    radial-gradient(circle at 8% 72%, rgba(239, 237, 255, 0.76), transparent 26rem),
+    linear-gradient(135deg, #fbfaff 0%, #f2f0ff 46%, #ffffff 100%);
+  color: #14213d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.dark body {
+  background-color: #0b1120;
+  color: #e2e8f0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #bfd6ff;
+  border-radius: 999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e3a8a;
+}
+
+/* Reveal-on-scroll utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-shell {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.2)),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.56), transparent 34rem);
+}
+
+.hero-dots {
+  background-image: radial-gradient(#c7c1ff 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  opacity: 0.6;
+}
+
+.hero-frame {
+  box-shadow: 0 22px 58px -28px rgba(112, 102, 208, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.glass-card {
+  border: 1px solid rgba(217, 213, 255, 0.9);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(249, 252, 255, 0.72));
+  box-shadow: 0 18px 50px -30px rgba(112, 102, 208, 0.22), 0 1px 0 rgba(255, 255, 255, 0.88) inset;
+  backdrop-filter: blur(18px);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #5e8bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
