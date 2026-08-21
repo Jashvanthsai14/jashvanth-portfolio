@@ -42,7 +42,7 @@ export default function Contact() {
     setSent(false);
 
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/contact', {
+      const response = await fetch('https://jashvanth-portfolio-backend.onrender.com/api/contact',  {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
